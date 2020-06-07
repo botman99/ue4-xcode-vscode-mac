@@ -15,6 +15,7 @@
 [Building Your Project in Visual Studio Code](#Building-Your-Project-in-Visual-Studio-Code)  
 [Building or Cleaning Your Project in Visual Studio Code](#Building-or-Cleaning-Your-Project-in-Visual-Studio-Code)  
 [Visual Studio Code Conclusion](#Visual-Studio-Code-Conclusion)  
+[Using VSCode with Older UE4 and macOS](#Using-VSCode-with-Older-UE4-and-macOS)  
 <!--te-->
 
 ## Getting Started
@@ -280,6 +281,10 @@ You can use the "Search Extensions in Marketplace" to search for extensions.  Yo
 
 - If you are using Perforce or Git for source control, you may want to install an extension for those (there are many to choose from)
 
+Here's an image showing the extensions I have installed for Visual Studio Code:
+
+![](https://raw.githubusercontent.com/botman99/ue4-xcode-vscode-mac/master/images/my_vscode_extensions.png)
+
 After installing the extensions, you can quit out of VSCode for now.  We have to set up some other things first.
 
 Open a Terminal window.  Enter the command "which brew" to see if you already have brew installed.  If the response is "brew not found" then you need to install it.  Go to the following website:
@@ -489,3 +494,31 @@ Again, you will see output in the Terminal window while the project is being bui
 ## Visual Studio Code Conclusion
 
 Now you know how to create an Unreal C++ project for Visual Studio Code.  You know how to build your C++ project and run it in the Visual Studio Code debugger to launch the editor with your game project.
+
+## Using VSCode with Older UE4 and macOS
+
+A few days ago, I needed to load up UE 4.20 on a machine running Mojave and I thought I'd use VSCode for building and debugging.  UE 4.20 uses Xcode 9.4.1 and 9.4.1 won't run on Catalina, so I had to use Mojave. When I stated up Visual Studio Code, I got the following message:
+
+ "Could not initialize Python interpreter - some features will be unavailable (e.g. debug visualizers)."
+
+ Digging into this, I discovered this was due to Mojave using Python version 2 by default.  The latest Visual Studio Code and extensions need Python 3.
+ 
+ To see which version(s) of Python you have installed, open a Terminal window and enter the following command:
+
+python --version
+
+You should see something like "Python 2.7.10" indicating you have Python 2 installeed.
+
+Now try the following command:
+
+python3 --version
+
+If you see "python3: command not found" then you don't have Python 3 installed.  If you see something like "Python 3.7.7" then you have Python 3 installed.
+
+If you don't have Python 3, you can install it using brew with the following command:
+
+brew install python
+
+When it is done, run the "python3 --version" command again and you should get something that says "Python 3.x.y" where x and y are version numbers.
+
+After installing Python 3, Visual Studio Code should work as expected.
