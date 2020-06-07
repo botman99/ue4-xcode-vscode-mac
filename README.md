@@ -274,7 +274,7 @@ In Visual Studio Code, click the "Extensions" button in the upper left (it looks
 
 You can use the "Search Extensions in Marketplace" to search for extensions.  You want to install the following extensions:
 
-- "C/C++ Extension (Intellisense, debugging and code browsing)" - from Microsoft
+- "C/C++ Intellisense, debugging and code browsing" - from Microsoft
 
 - "C# for Visual Studio Code (powered by OmniSharp)" - from Microsoft  
 (When installing the C# extension, you will be prompted to "Get the .NET Core SDK", click on that, download it and install it.  You may want to keep the .NET .pkg file in case you need to re-install it later).
