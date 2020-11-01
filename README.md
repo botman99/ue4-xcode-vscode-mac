@@ -277,7 +277,14 @@ You can use the "Search Extensions in Marketplace" to search for extensions.  Yo
 - "C/C++ Intellisense, debugging and code browsing" - from Microsoft
 
 - "C# for Visual Studio Code (powered by OmniSharp)" - from Microsoft  
-(When installing the C# extension, you will be prompted to "Get the .NET Core SDK", click on that, download it and install it.  You may want to keep the .NET .pkg file in case you need to re-install it later).
+
+When installing the C# extension, you will be prompted to "Get the .NET Core SDK", click on that, download it and install it.
+You may want to keep the .NET .pkg file in case you need to re-install it later.
+
+To be sure .NET is well installed, test with command in your terminal: `dotnet --version`
+
+If the dotnet cli command is not found, use this command: `ln -s /usr/local/share/dotnet/dotnet /usr/local/bin/`
+
 
 - If you are using Perforce or Git for source control, you may want to install an extension for those (there are many to choose from)
 
