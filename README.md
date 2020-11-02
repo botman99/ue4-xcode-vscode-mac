@@ -276,10 +276,27 @@ You can use the "Search Extensions in Marketplace" to search for extensions.  Yo
 
 - "C/C++ Intellisense, debugging and code browsing" - from Microsoft
 
-- "C# for Visual Studio Code (powered by OmniSharp)" - from Microsoft  
-(When installing the C# extension, you will be prompted to "Get the .NET Core SDK", click on that, download it and install it.  You may want to keep the .NET .pkg file in case you need to re-install it later).
+- "C# for Visual Studio Code (powered by OmniSharp)" - from Microsoft
 
 - If you are using Perforce or Git for source control, you may want to install an extension for those (there are many to choose from)
+
+NOTE - While installing "C# for Visual Studio Code", you may be prompted to "Get the .NET Core SDK".  If so, click on that, download it and install it.  If not prompted, you will need to go to the following website and download the .NET Core SDK:
+
+https://dotnet.microsoft.com/download
+
+In the "macOS" section, click on the "Download .NET Core SDK" link.  Then double click on the "dotnet-sdk" package that was downloaded to run the installer and install it.
+
+You should see a message when the installation is complete saying that the "NET Core SDK" was installed at /usr/local/share/dotnet.  To test the NET Core SDK installation, you can run the following command in a new Teminal window:
+
+donet --version
+
+This should report the current NET Core SDK version (for me it reports "3.1.403").
+
+If you get "command not found", you may want to create a symbolic link from /usr/local/share/dotnet/dotnet to /usr/local/bin like so:
+
+sudo ln -s /usr/local/share/dotnet/dotnet /usr/local/bin
+
+Then run the "dotnet --version" command again.  Note that Catalina and later won't allow you to do this as the root file system is mounted read-only.
 
 Here's an image showing the extensions I have installed for Visual Studio Code:
 
