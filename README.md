@@ -288,7 +288,7 @@ In the "macOS" section, click on the "Download .NET Core SDK" link.  Then double
 
 You should see a message when the installation is complete saying that the "NET Core SDK" was installed at /usr/local/share/dotnet.  To test the NET Core SDK installation, you can run the following command in a new Teminal window:
 
-donet --version
+dotnet --version
 
 This should report the current NET Core SDK version (for me it reports "3.1.403").
 
