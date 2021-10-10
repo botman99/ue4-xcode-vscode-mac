@@ -332,9 +332,7 @@ In the Terminal window, change to the Unreal Engine "Engine/Build/BatchFiles/Mac
 
 ...then run the following command (using the full path to your .uproject file):
 
-    ./GenerateProjectFiles.sh -project="/Users/<username>/Documents/Unreal\ Projects/TPGame/TPGame.uproject" -game -vscode
-
-Make SURE to place double quotes around the full path to the .project file after the "-project=" argument so that spaces in the path name are preserved.
+    ./GenerateProjectFiles.sh -project=/Users/<username>/Documents/Unreal\ Projects/TPGame/TPGame.uproject -game -vscode
 
 If you see "ERROR: Unhandled exception:" followed by "Unable to find project file based on argument...", double check the full path to your project file (you didn't use "\<username\>" did you? :) )
 
