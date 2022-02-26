@@ -190,7 +190,7 @@ You should see "TPGame".  Expand it, then expand the "Source" folder to see the 
 
 Now let's edit some code!
 
-Click once on "TPGameCharacter.h" to open it in the Xcode editor.  Scroll down the to very bottom of the file and add this line before the final "};" at the end:
+Click once on "TPGameCharacter.h" to open it in the Xcode editor.  Scroll down to the very bottom of the file and add this line before the final "};" at the end:
 
         virtual void BeginPlay() override;
 
